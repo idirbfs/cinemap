@@ -1,0 +1,37 @@
+/* Navbar.css */
+.my-navbar{
+    background-image: transparent !important;
+    color: #ffffff !important;
+    height: 5rem !important;
+    width: 100% !important;
+    position: relative !important;    
+}   
+
+img{
+    width: 10rem !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
+
+button{
+    height: 35px !important;
+    width: 10rem !important;
+}
+
+.connexion{
+    text-align: center !important;
+    background-color: rgb(255, 255, 255) !important;
+    color: #000000 !important;
+    border-radius: 0.8rem !important;
+    border-color: rgb(0, 0, 0) !important;
+}
+
+.inscription{
+    text-align: center !important;
+    background-color: rgb(0, 0, 0) !important;
+    color: #ffffff !important;
+    border-radius: 0.8rem !important;
+    border-color: aliceblue !important;
+}
