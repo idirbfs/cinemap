@@ -2,12 +2,11 @@
 .profil-navbar{
     background-image: transparent !important;
     color: #ffffff !important;
-    height: 5rem !important;
     width: 100% !important;
-    position: relative !important;    
+    position: absolute !important;   
 }   
 
-img{
+#logo{
     width: 10rem !important;
     height: 100% !important;
     border-radius: 50% !important;
@@ -20,15 +19,7 @@ button{
     width: 10rem !important;
 }
 
-.connexion{
-    text-align: center !important;
-    background-color: rgb(255, 255, 255) !important;
-    color: #ffffff !important;
-    border-radius: 0.8rem !important;
-    border-color: rgb(0, 0, 0) !important;
-}
-
-.inscription{
+.profil-button{
     text-align: center !important;
     background-color: rgb(0, 0, 0) !important;
     color: #ffffff !important;

@@ -1,13 +1,12 @@
 /* Navbar.css */
-.my-navbar{
+.accueil-navbar{
     background-image: transparent !important;
-    color: #ffffff !important;
     height: 5rem !important;
     width: 100% !important;
-    position: relative !important;    
+    position: absolute !important;    
 }   
 
-img{
+#logo{
     width: 10rem !important;
     height: 100% !important;
     border-radius: 50% !important;
