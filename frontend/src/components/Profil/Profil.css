@@ -1,74 +1,69 @@
 /* Profil.css */
 
 .Profil {
-    background-image: url('../../assets/images/fond@2x.png');
+  background-image: url("../../assets/images/fond@2x.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-  }
+  background-repeat: no-repeat;
   
-  .Profil_content {
-    display: flex;
-    justify-content: center;
-    padding: 8rem;
-    width: 100%;
-    height: 55rem;
-    margin-top: 6rem;
-  }
-  
-  .Profil-container {
-    width: 100% !important; /* Specific class for the container within Profil component */
-  }
-  
-  .Profil-details {
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-    border: 1px solid #ffffff2d;
-    padding: 1rem;
-  }
-  
-  
-  .Profil-Grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
+  max-width: 2198px;
+  max-height: 3908px;
+  display: flex;
+  overflow: hidden;
+}
 
-  .Profil-mode{
-    
-    margin-top: 3rem;
-    
-    padding: 1rem;
-  }
-    .Profil-mode>p{
-    
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    
-    margin-top: 1rem;
-    
-  }
-  .Profil-mode>h1 {
-    width: 50rem !important;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-    border: 1px solid #ffffff2d;
-    
-  } 
+.Profil_content {
+  display: flex;
+  justify-content: center;
+  padding: 8rem;
+  width: 100%;
+  height: 55rem;
+  margin-top: 6rem;
+}
 
-  .Profil-avatar {
-    height: 600px;
-    max-width: 670px;
-    max-height: 1118px;
-  }
-  
+.Profil-container {
+  width: 100% !important; /* Specific class for the container within Profil component */
+}
+
+.Profil-details {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  border: 1px solid #ffffff2d;
+  padding: 1rem;
+}
+
+.Profil-Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.Profil-mode {
+  margin-top: 3rem;
+
+  padding: 1rem;
+}
+.Profil-mode > p {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 1rem;
+}
+.Profil-mode > h1 {
+  width: 50rem !important;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  border: 1px solid #ffffff2d;
+}
+
+.Profil-avatar {
+  height: 600px;
+  max-width: 670px;
+  max-height: 1118px;
+}

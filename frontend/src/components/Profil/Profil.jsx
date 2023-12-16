@@ -8,32 +8,27 @@ const Profil = () => {
     <>
       <NavbarProfil />
       <div className="Profil">
-  <div className="Profil_content">
-    <div className="Profil-container">
-      <section className="Profil-container">
-        <div className="Profil-Grid">
+        <div className="Profil_content">
+          <div className="Profil-container">
+            <section className="Profil-container">
+              <div className="Profil-Grid">
                 {/* Left side */}
                 <div className="col-sm-4 Profil-mode">
                   <p>Modes de jeu</p>
-                  
-                    <h1>La quête du cinéphile</h1>
-                    <h1>Sprint cinématique</h1>
-                    <h1>Bataille des records</h1>
-                    <h1>Duels</h1>
-                  
+
+                  <h1>La quête du cinéphile</h1>
+                  <h1>Sprint cinématique</h1>
+                  <h1>Bataille des records</h1>
+                  <h1>Duels</h1>
                 </div>
-        
+
                 {/* Right side */}
                 <div className="Profil-Grid Profil-details">
-            <div className="Profil-Grid" id="avatar">
-                        <img
-                          src={avatar}
-                          alt="Avatar"
-                          className="Profil-avatar"
-                        />
+                  <div className="Avatar-Grid" id="avatar">
+                    <img src={avatar} alt="Avatar" className="Profil-avatar" />
                   </div>
                   <div className="row">
-              <div className="text-center Profil-details">
+                    <div className="text-center Profil-details">
                       <h1>Profil</h1>
                       <p>Pseudo : [Your Pseudo]</p>
                       <h3>Statistiques</h3>
