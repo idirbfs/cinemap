@@ -44,8 +44,8 @@ const Accueil = () => {
         </div>
       </section>
     </main>
-    {showInscription && <Inscription onClose={closePopup} />}
-      {showConnexion && <Connexion onClose={closePopup} />}
+    {showInscription && <Inscription onClose={closePopup} openConnexionPopup={openConnexionPopup} />}
+      {showConnexion && <Connexion onClose={closePopup} openInscriptionPopup={openInscriptionPopup} />}
     </div>
   );
 };

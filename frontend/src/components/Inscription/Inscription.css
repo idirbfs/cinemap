@@ -66,10 +66,16 @@
     border-radius: 4px;
   }
   
-  .submit-row {
+  .submit-rowI {
     text-align: right;
     font-family: "Helvetica Neue";
     margin-top: 20px;
+  }
+
+  .submit-rowI button {
+    background-color: black; /* Remplacez "your_color" par la couleur souhaitée */
+    color: #ffffff; /* Couleur du texte en blanc */
+    border-color: #ffffff;
   }
   
   

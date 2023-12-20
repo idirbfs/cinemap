@@ -2,7 +2,11 @@ import React from "react";
 import "./Inscription.css";
 import logo from "../../assets/images/logo.png";
 
-const Inscription = ({ onClose }) => {
+const Inscription = ({ onClose, openConnexionPopup }) => {
+  const handleConnexionClick = () => {
+    onClose(); // Fermer la popup d'inscription
+    openConnexionPopup(); // Ouvrir la popup de connexion
+  };
   return (
     <div className="popup InscriptionP">
       <div className="popup-content InscriptionC">
@@ -16,7 +20,7 @@ const Inscription = ({ onClose }) => {
               <h4>S'inscrire</h4>
               <p>
                 Déjà un compte ?&nbsp;
-                <a id="login-link" href="#">
+                <a id="login-link" onClick={handleConnexionClick} style={{color: 'grey', cursor:'pointer'}}>
                   Connexion!
                 </a>
               </p>
@@ -51,7 +55,7 @@ const Inscription = ({ onClose }) => {
               minLength="6"
             />
           </div>
-          <div className="submit-row">
+          <div className="submit-rowI">
             <button
               className="btn btn-primary"
               id="submit-id-submit"
