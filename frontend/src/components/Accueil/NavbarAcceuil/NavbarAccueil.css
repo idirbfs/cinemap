@@ -1,7 +1,7 @@
-/* Navbar.css */
+/* NavbarAccueil.css */
 .accueil-navbar{
     background-image: transparent !important;
-    height: 5rem !important;
+    color: #ffffff !important;
     width: 100% !important;
     position: absolute !important;    
 }   

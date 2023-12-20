@@ -1,12 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Accueil.css";
 import NavbarAccueil from "./NavbarAcceuil/NavbarAccueil";
+import Inscription from "../Inscription/Inscription";
+import Connexion from "../Connexion/Connexion";
+
 const Accueil = () => {
+  const [showInscription, setShowInscription] = useState(false);
+  const [showConnexion, setShowConnexion] = useState(false);
+
+  const openInscriptionPopup = () => {
+    setShowInscription(true);
+    setShowConnexion(false);
+  };
+
+  const openConnexionPopup = () => {
+    setShowConnexion(true);
+    setShowInscription(false);
+  };
+
+  const closePopup = () => {
+    setShowInscription(false);
+    setShowConnexion(false);
+  };
   return (
     <div>
     <header>
       <nav>
-        <NavbarAccueil />
+      <NavbarAccueil
+            openInscriptionPopup={openInscriptionPopup}
+            openConnexionPopup={openConnexionPopup}
+          />
       </nav>
     </header>
     <main>
@@ -21,6 +44,8 @@ const Accueil = () => {
         </div>
       </section>
     </main>
+    {showInscription && <Inscription onClose={closePopup} />}
+      {showConnexion && <Connexion onClose={closePopup} />}
     </div>
   );
 };
