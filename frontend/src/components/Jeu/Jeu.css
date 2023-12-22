@@ -38,44 +38,10 @@
   
   
   .foreground-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    display: grid;
+    flex-direction: left;
+  
+    padding: 200px;
   }
   
-  .mini-map {
-    width: 150px;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 10px;
-  }
-  
-  .quiz-section {
-    width: 150px;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .rectangle-option {
-    width: 100%;
-    height: 50px;
-    background-color: lightblue;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .button-container {
-    margin-top: 20px;
-  }
-  
-  .skip-button,
-  .submit-button {
-    margin-right: 10px;
-  }
   

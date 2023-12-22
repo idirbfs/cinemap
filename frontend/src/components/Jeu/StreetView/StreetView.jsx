@@ -1,18 +1,46 @@
 // StreetView.jsx
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import StreetView from 'react-google-streetview';
 import './StreetView.css';
 import googlemapApikey from '../../../Api/googleMapsApiKey';
+import { useNavigate } from 'react-router-dom';
+import styled from "styled-components";
+
+const Timer = styled.div`
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%);
+  z-index: 1; // Ajoutez cette ligne
+`;
+
+const QuitButton = styled.button`
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+`;
 
 const StreetViewComponent = ({ position }) => {
+  const [timer, setTimer] = useState(1000);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setTimer((timer) => timer > 0 ? timer - 1 : 0);
+    }, 1000);
+    return () => clearInterval(timerId);
+  }, []);
+
+  const handleQuitGame = () => {
+    navigate('/'); 
+  };
+
+
   return (
     <div id="street-view" className="street-view">
-      <div className="overlay">
-        <button className="quit-button" onClick={() => window.close()}>
-          Quit
-        </button>
-        <p className="timeout-text">Timeout: 5s</p>
-      </div>
+      
       <StreetView
         apiKey={googlemapApikey}
         streetViewPanoramaOptions={{
@@ -21,9 +49,11 @@ const StreetViewComponent = ({ position }) => {
           zoom: 1,
         }}
         onUnmount={(streetViewPanorama) => {
-          // Handle cleanup if needed
+          
         }}
-      />
+      ></StreetView>
+      <Timer style={{borderRadius:"50%", backgroundColor: "rgba(30, 30, 30,100)", color: 'white', fontSize: '2rem'}}>{`0:${timer < 10 ? `0${timer}` : timer}`}</Timer>
+        <QuitButton style={{borderRadius:"90%", backgroundColor: "rgba(30, 30, 30,100)", color: 'white'}} onClick={handleQuitGame}>{"Quitter"}</QuitButton>
     </div>
   );
 };
