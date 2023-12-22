@@ -1,6 +1,7 @@
 import React from "react";
 import "./Profil.css";
 import NavbarProfil from "./NavbarProfil/NavbarProfil";
+import config from "../../assets/config.json";
 import avatar from "../../assets/images/avatar.png";
 
 const Profil = () => {
@@ -30,11 +31,19 @@ const Profil = () => {
                   <div className="row">
                     <div className="text-center Profil-details">
                       <h1>Profil</h1>
-                      <p>Pseudo : [Your Pseudo]</p>
+                      <p>
+                        Pseudo : <b>{config.pseudo}</b>
+                      </p>
                       <h3>Statistiques</h3>
-                      <p>Points : [Your Points]</p>
-                      <p>Meilleur temps : [Your Best Time]</p>
-                      <p>Parties jouées : [Your Played Games]</p>
+                      <p>
+                        Points : <b>{config.points}</b>
+                      </p>
+                      <p>
+                        Meilleur temps : <b>{config.points}</b>
+                      </p>
+                      <p>
+                        Parties jouées : <b>{config.nbPlayed}</b>
+                      </p>
                     </div>
                   </div>
                 </div>

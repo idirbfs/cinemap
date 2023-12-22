@@ -1,6 +1,7 @@
 import React from "react";
 import "./Inscription.css";
 import logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const Inscription = ({ onClose, openConnexionPopup }) => {
   const handleConnexionClick = () => {
@@ -20,7 +21,11 @@ const Inscription = ({ onClose, openConnexionPopup }) => {
               <h4>S'inscrire</h4>
               <p>
                 Déjà un compte ?&nbsp;
-                <a id="login-link" onClick={handleConnexionClick} style={{color: 'grey', cursor:'pointer'}}>
+                <a
+                  id="login-link"
+                  onClick={handleConnexionClick}
+                  style={{ color: "grey", cursor: "pointer" }}
+                >
                   Connexion!
                 </a>
               </p>
@@ -56,13 +61,15 @@ const Inscription = ({ onClose, openConnexionPopup }) => {
             />
           </div>
           <div className="submit-rowI">
-            <button
-              className="btn btn-primary"
-              id="submit-id-submit"
-              type="submit"
-            >
-              S'inscrire
-            </button>
+            <Link to="/profil">
+              <button
+                className="btn btn-primary"
+                id="submit-id-submit"
+                type="submit"
+              >
+                S'inscrire
+              </button>
+            </Link>
           </div>
         </div>
       </div>
