@@ -1,6 +1,7 @@
 import React from "react";
 import "./Connexion.css";
 import logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const Connexion = ({ onClose, openInscriptionPopup }) => {
   const handleInscriptionClick = () => {
@@ -12,7 +13,7 @@ const Connexion = ({ onClose, openInscriptionPopup }) => {
       <div className="popup-content ConnexionC">
         <div className="login-box">
           <div className="login-box-header">
-          <button className="close-buttonC" onClick={onClose}>
+            <button className="close-buttonC" onClick={onClose}>
               &times;
             </button>
             <img src={logo} width="229" height="74" alt="Cinémaps logo" />
@@ -20,7 +21,11 @@ const Connexion = ({ onClose, openInscriptionPopup }) => {
               <h4>Se connecter</h4>
               <p>
                 Pas de compte ?&nbsp;
-                <a id="register-link" onClick={handleInscriptionClick} style={{color: 'grey', cursor:'pointer'}}>
+                <a
+                  id="register-link"
+                  onClick={handleInscriptionClick}
+                  style={{ color: "grey", cursor: "pointer" }}
+                >
                   Inscription!
                 </a>
               </p>
@@ -43,9 +48,15 @@ const Connexion = ({ onClose, openInscriptionPopup }) => {
             />
           </div>
           <div className="submit-rowC">
-            <button className="btn btn-primary" id="submit-id-submit" type="submit">
-              Se connecter
-            </button>
+            <Link to="/profil">
+              <button
+                className="btn btn-primary"
+                id="submit-id-submit"
+                type="submit"
+              >
+                Se connecter
+              </button>
+            </Link>
           </div>
           <div className="d-flex flex-row align-items-center login-box-seperator-container">
             <div className="login-box-seperator"></div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Accueil.css";
 import NavbarAccueil from "./NavbarAcceuil/NavbarAccueil";
 import Inscription from "../Inscription/Inscription";
@@ -24,28 +24,44 @@ const Accueil = () => {
   };
   return (
     <div>
-    <header>
-      <nav>
-      <NavbarAccueil
+      <header>
+        <nav>
+          <NavbarAccueil
             openInscriptionPopup={openInscriptionPopup}
             openConnexionPopup={openConnexionPopup}
           />
-      </nav>
-    </header>
-    <main>
-      <section className="Accueil">
-        <div className="container d-flex align-items-center justify-content-center vh-100">
-          <p className="text-center">
-            Immergez-vous <br />
-            dans les grands décors <br />
-            du cinéma de l’imaginaire !
-          </p>
-          <button type="button" className="btn btn-secondary btn-sm">Jouer</button>
-        </div>
-      </section>
-    </main>
-    {showInscription && <Inscription onClose={closePopup} openConnexionPopup={openConnexionPopup} />}
-      {showConnexion && <Connexion onClose={closePopup} openInscriptionPopup={openInscriptionPopup} />}
+        </nav>
+      </header>
+      <main>
+        <section className="Accueil">
+          <div className="container d-flex align-items-center justify-content-center vh-100">
+            <p className="text-center">
+              Immergez-vous <br />
+              dans les grands décors <br />
+              du cinéma de l’imaginaire !
+            </p>
+            <button
+              onClick={openConnexionPopup}
+              type="button"
+              className="btn btn-secondary btn-sm"
+            >
+              Jouer
+            </button>
+          </div>
+        </section>
+      </main>
+      {showInscription && (
+        <Inscription
+          onClose={closePopup}
+          openConnexionPopup={openConnexionPopup}
+        />
+      )}
+      {showConnexion && (
+        <Connexion
+          onClose={closePopup}
+          openInscriptionPopup={openInscriptionPopup}
+        />
+      )}
     </div>
   );
 };
