@@ -1,0 +1,31 @@
+/* StreetView.css */
+.street-view {
+    flex: 1;
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .quit-button {
+    background-color: #333;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .timeout-text {
+    margin: 10px 0;
+  }
+  
